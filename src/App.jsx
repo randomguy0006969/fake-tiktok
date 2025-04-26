@@ -20,6 +20,7 @@ function App() {
     const transferredamount = localStorage.getItem('transferred')
     const transferredhistory = localStorage.getItem('transferhistory')
     const currentBalance= localStorage.getItem('balance')
+    const defaultfontsize= localStorage.getItem('fontsize')
     if (!existing) {
       localStorage.setItem('username', '@mysterygiftmanofficial');
     }
@@ -32,10 +33,14 @@ function App() {
     if (!transferredhistory) {
       localStorage.setItem('transferhistory', '0');
     }
+    if (!defaultfontsize){
+      localStorage.setItem('fontsize',16);
+      document.documentElement.style.fontSize = `${16}px`;
+    }
   }, []);
   return (
     <Router>
-      <PWARequired />
+      {/* <PWARequired /> */}
       <Routes>
         <Route path="/" element={<TikTokProfile />} />
         <Route path="/balance" element={<BalancePage/>} />

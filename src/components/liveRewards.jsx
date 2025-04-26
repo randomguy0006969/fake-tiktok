@@ -129,7 +129,7 @@ const LiveRewardsPage = () => {
       </div>  
       ))} */}
       {history.map(([dateTime, amount], index) => (
-  <div key={index} className="flex flex-col justify-center items-start border-t border-gray-100 pt-6 h-22">
+  <div key={index} className="flex flex-col justify-center items-start border-t border-gray-100 pt-6 h-25">
     <div className='flex justify-around items-center w-full'>
       <h3 className="font-semibold text-gray-800 mb-6 text-lg">Transfer To Tiktok</h3>
       <div className='w-50'></div>

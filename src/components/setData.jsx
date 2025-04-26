@@ -141,7 +141,7 @@ export default function SocialMetricsForm() {
   useEffect(() => {
     document.documentElement.style.fontSize = `${selectedSize}px`;
     localStorage.setItem('fontSize', selectedSize);
-  }, [selectedSize]);
+  }, [selectedSize,username]);
 
   const sizes = [12,13, 14, 15, 16, 17,18];
 

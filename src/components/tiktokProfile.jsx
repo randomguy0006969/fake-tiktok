@@ -190,7 +190,7 @@ export default function TikTokProfile() {
         <div className="w-full text-center mt-4 text-sm text-gray-600">
         <p className='h-5'>{JSON.parse(localStorage.getItem('bio'))?.[0]}</p>
         <p className='h-5'>{JSON.parse(localStorage.getItem('bio'))?.[1]}</p>
-          <p className="flex items-center justify-center h-6"><p>{JSON.parse(localStorage.getItem('bio'))?.[2]}</p> </p>
+          <p className="flex items-center justify-center h-6"><span>{JSON.parse(localStorage.getItem('bio'))?.[2]}</span> </p>
           <div className="flex items-center justify-center mt-1">
           <RiUserStarLine className='text-black' size={15} />
             <p className='font-bold text-gray-800 text-md'>TikTok Studio</p>
