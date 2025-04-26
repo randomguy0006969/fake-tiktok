@@ -90,7 +90,7 @@ const InstallPage = () => {
       </button> // Show the button only if PWA is installable
       )}
 
-      {!isInstallable && <p>Your browser doesn't support installing this PWA.</p>}
+      {!isInstallable && <p>Your browser doesn't support installing this.</p>}
     </div>
   );
 };

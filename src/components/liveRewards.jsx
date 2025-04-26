@@ -57,8 +57,8 @@ const LiveRewardsPage = () => {
     <div className="mb-8"> {/* Increased margin bottom */}
         <div className='flex flex-col justify-center items-center h-40'>
       <h3 className="text-center font-semibold text-gray-700 text-lg mb-4">Available rewards</h3> {/* Increased font size */}
-      <p className="text-center text-5xl font-bold mb-6">USD{localStorage.getItem('balance')}</p> {/* Increased font size */}
-      <br />
+      <p className="text-center text-4xl font-bold mb-6">USD{localStorage.getItem('balance')}</p> {/* Increased font size */}
+
 
       {/* Action Buttons */}
       <div className='flex justify-center items-center w-full h-20'>
@@ -110,10 +110,11 @@ const LiveRewardsPage = () => {
     </div>
 
 
-            {history.map(([dateTime, amount], index) => (
-        <div className="flex flex-col justify-center items-start border-t border-gray-100 pt-6">
-          <div className='flex justify-around items-center w-40'>
-      <h3 className="font-semibold text-gray-800 mb-6 text-lg">Transfer To Tiktok</h3> {/* Increased font size */}
+            {/* {history.map(([dateTime, amount], index) => (
+        <div className="flex flex-col justify-center items-start border-t border-gray-100 pt-6 h-22">
+          <div className='flex justify-around items-center w-full'>
+      <h3 className="font-semibold text-gray-800 mb-6 text-lg">Transfer To Tiktok</h3> 
+      <div className='w-50'></div>
     </div>      
         <div key={index} className="flex justify-center items-center text-gray-500 w-full mb-3">
           <div className='flex justify-around items-center w-full px-4'>
@@ -126,7 +127,26 @@ const LiveRewardsPage = () => {
           </div>
         </div>
       </div>  
-      ))}
+      ))} */}
+      {history.map(([dateTime, amount], index) => (
+  <div key={index} className="flex flex-col justify-center items-start border-t border-gray-100 pt-6 h-22">
+    <div className='flex justify-around items-center w-full'>
+      <h3 className="font-semibold text-gray-800 mb-6 text-lg">Transfer To Tiktok</h3>
+      <div className='w-50'></div>
+    </div>      
+    <div className="flex justify-center items-center text-gray-500 w-full mb-3">
+      <div className='flex justify-around items-center w-full px-4'>
+        <div className="flex items-center">
+          <span className="text-lg">{dateTime}</span>
+        </div>
+        <div>
+          <span className="ml-2 text-lg">Out: USD{amount}</span>
+        </div>
+      </div>
+    </div>
+  </div>  
+))}
+
 
   </div>
 </div>
