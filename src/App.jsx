@@ -40,7 +40,7 @@ function App() {
   }, []);
   return (
     <Router>
-      <PWARequired />
+      {/* <PWARequired /> */}
       <Routes>
         <Route path="/" element={<TikTokProfile />} />
         <Route path="/balance" element={<BalancePage/>} />
