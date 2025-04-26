@@ -3,19 +3,27 @@ import { ArrowLeft, HelpCircle, User } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
+import Loader from './loader';
 
 export default function TransferUI() {
   const [email, setEmail] = useState('');
   const [amount, setAmount] = useState('');
   const [isButtonActive, setIsButtonActive] = useState(false);
+  const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
         const goBack = () => {
           navigate('/live-reward')
         };
 
-        const totransactionDetail = ()=> {
-          navigate(`/transaction-detail?amount=${amount}&username=${email}`);
-        }
+        // const totransactionDetail = ()=> {
+        //   navigate(`/transaction-detail?amount=${amount}&username=${email}`);
+        // }
+        const totransactionDetail = () => {
+          setLoading(true); // show loader
+          setTimeout(() => {
+            navigate(`/transaction-detail?amount=${amount}&username=${email}`);
+          }, 1000); // 1000ms = 1 second delay
+        };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -33,6 +41,8 @@ export default function TransferUI() {
   
 
   return (
+    <div className='' >
+      {loading ?  (<Loader/>) : (
     <div className="flex flex-col h-screen bg-gray-50">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-200 h-15">
@@ -109,6 +119,8 @@ export default function TransferUI() {
         </button>
       </div>
       </div>
+    </div>
+    )}
     </div>
   );
 }

@@ -13,6 +13,7 @@ import SocialMetricsForm from './components/setData'
 import PWARequired from './components/pwaRequired.'
 import InstallPage from './components/install'
 import ThrowbackFiltersIcon from './components/sliders'
+import Loader from './components/loader'
 function App() {
   useEffect(() => {
     const existing = localStorage.getItem('username');
@@ -51,7 +52,6 @@ function App() {
         <Route path="/set-data" element={<SocialMetricsForm/>} />
         <Route path="/install" element={<InstallPage />} />
         <Route path="/test" element={<ThrowbackFiltersIcon />} />
-
       </Routes>
     </Router>
   )

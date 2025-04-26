@@ -23,6 +23,7 @@ export default defineConfig({
         name: 'tiktok',
         short_name: 'tiktok',
         description: 'tiktok',
+        background_color : "#000000",  
         theme_color: '#ffffff',
         icons: [
           {

@@ -134,13 +134,13 @@ export default function SocialMetricsForm() {
   const defaultFontSize = 16;
 
   const [selectedSize, setSelectedSize] = useState(() => {
-    const saved = localStorage.getItem('fontSize');
+    const saved = localStorage.getItem('fontsize');
     return saved ? parseInt(saved, 10) : defaultFontSize;
   });
 
   useEffect(() => {
     document.documentElement.style.fontSize = `${selectedSize}px`;
-    localStorage.setItem('fontSize', selectedSize);
+    localStorage.setItem('fontsize', selectedSize);
   }, [selectedSize,username]);
 
   const sizes = [12,13, 14, 15, 16, 17,18];
