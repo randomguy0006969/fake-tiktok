@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Additional full reset (optional) */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px; /* 1rem will now be 20px instead of 16px */
+}
+
+/* Disable text selection globally */
+* {
+  user-select: none; /* Disable text selection */
+}
+
+input, textarea, select {
+  user-select: text; /* Allow text selection on input, textarea, and select */
+}
